@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CDF24F0A6B589A05589415F /* libPods-LocalToIP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 628FB211688D5D8F6CC585EC /* libPods-LocalToIP.a */; };
+		B663F9A0216D02A500D35E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F99F216D02A500D35E14 /* AppDelegate.m */; };
+		B663F9A3216D02A500D35E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F9A2216D02A500D35E14 /* ViewController.m */; };
+		B663F9A5216D02A600D35E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B663F9A4216D02A600D35E14 /* Assets.xcassets */; };
+		B663F9A8216D02A600D35E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B663F9A6216D02A600D35E14 /* Main.storyboard */; };
+		B663F9AB216D02A600D35E14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F9AA216D02A600D35E14 /* main.m */; };
+		B663F9B6216D02A600D35E14 /* LocalToIPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F9B5216D02A600D35E14 /* LocalToIPTests.m */; };
+		B663F9C1216D02A600D35E14 /* LocalToIPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F9C0216D02A600D35E14 /* LocalToIPUITests.m */; };
+		C0E32FC63AB63802F451B29A /* libPods-LocalToIPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F95D55CFB1275142AD6570F4 /* libPods-LocalToIPTests.a */; };
+		FAA5AFA2985B450F4D1DDEDC /* libPods-LocalToIPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E135C1AB7F125BC9ACCE8E9 /* libPods-LocalToIPUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B663F9B2216D02A600D35E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B663F993216D02A500D35E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B663F99A216D02A500D35E14;
+			remoteInfo = LocalToIP;
+		};
+		B663F9BD216D02A600D35E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B663F993216D02A500D35E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B663F99A216D02A500D35E14;
+			remoteInfo = LocalToIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B62C12E4216D18EA0033B15F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		112E3D41D87F23A68F0ADD07 /* Pods-LocalToIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPTests/Pods-LocalToIPTests.release.xcconfig"; sourceTree = "<group>"; };
+		23290C120B2F47C5A1D6A5DA /* Pods-LocalToIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPTests/Pods-LocalToIPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E135C1AB7F125BC9ACCE8E9 /* libPods-LocalToIPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalToIPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		628FB211688D5D8F6CC585EC /* libPods-LocalToIP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalToIP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8C376A26283FC5152D2517 /* Pods-LocalToIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPUITests/Pods-LocalToIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B663F99B216D02A500D35E14 /* LocalToIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalToIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B663F99E216D02A500D35E14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B663F99F216D02A500D35E14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B663F9A1216D02A500D35E14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B663F9A2216D02A500D35E14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B663F9A4216D02A600D35E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B663F9A7216D02A600D35E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B663F9A9216D02A600D35E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B663F9AA216D02A600D35E14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B663F9AC216D02A600D35E14 /* LocalToIP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalToIP.entitlements; sourceTree = "<group>"; };
+		B663F9B1216D02A600D35E14 /* LocalToIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalToIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B663F9B5216D02A600D35E14 /* LocalToIPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalToIPTests.m; sourceTree = "<group>"; };
+		B663F9B7216D02A600D35E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B663F9BC216D02A600D35E14 /* LocalToIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalToIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B663F9C0216D02A600D35E14 /* LocalToIPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalToIPUITests.m; sourceTree = "<group>"; };
+		B663F9C2216D02A600D35E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89E10B51C9F59EABB6491E0 /* Pods-LocalToIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIP/Pods-LocalToIP.debug.xcconfig"; sourceTree = "<group>"; };
+		BEF3AC770C0434215C24E242 /* Pods-LocalToIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIP.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIP/Pods-LocalToIP.release.xcconfig"; sourceTree = "<group>"; };
+		CFD5F3671220E1C6F52A72FE /* Pods-LocalToIPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPUITests/Pods-LocalToIPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F95D55CFB1275142AD6570F4 /* libPods-LocalToIPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalToIPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B663F998216D02A500D35E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDF24F0A6B589A05589415F /* libPods-LocalToIP.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9AE216D02A600D35E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E32FC63AB63802F451B29A /* libPods-LocalToIPTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9B9216D02A600D35E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA5AFA2985B450F4D1DDEDC /* libPods-LocalToIPUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C761B2A2D98192FAB13A011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B89E10B51C9F59EABB6491E0 /* Pods-LocalToIP.debug.xcconfig */,
+				BEF3AC770C0434215C24E242 /* Pods-LocalToIP.release.xcconfig */,
+				23290C120B2F47C5A1D6A5DA /* Pods-LocalToIPTests.debug.xcconfig */,
+				112E3D41D87F23A68F0ADD07 /* Pods-LocalToIPTests.release.xcconfig */,
+				6E8C376A26283FC5152D2517 /* Pods-LocalToIPUITests.debug.xcconfig */,
+				CFD5F3671220E1C6F52A72FE /* Pods-LocalToIPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B62C124B216D0F7E0033B15F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				628FB211688D5D8F6CC585EC /* libPods-LocalToIP.a */,
+				F95D55CFB1275142AD6570F4 /* libPods-LocalToIPTests.a */,
+				2E135C1AB7F125BC9ACCE8E9 /* libPods-LocalToIPUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B663F992216D02A500D35E14 = {
+			isa = PBXGroup;
+			children = (
+				B663F99D216D02A500D35E14 /* LocalToIP */,
+				B663F9B4216D02A600D35E14 /* LocalToIPTests */,
+				B663F9BF216D02A600D35E14 /* LocalToIPUITests */,
+				B663F99C216D02A500D35E14 /* Products */,
+				B62C124B216D0F7E0033B15F /* Frameworks */,
+				5C761B2A2D98192FAB13A011 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B663F99C216D02A500D35E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B663F99B216D02A500D35E14 /* LocalToIP.app */,
+				B663F9B1216D02A600D35E14 /* LocalToIPTests.xctest */,
+				B663F9BC216D02A600D35E14 /* LocalToIPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B663F99D216D02A500D35E14 /* LocalToIP */ = {
+			isa = PBXGroup;
+			children = (
+				B663F99E216D02A500D35E14 /* AppDelegate.h */,
+				B663F99F216D02A500D35E14 /* AppDelegate.m */,
+				B663F9A1216D02A500D35E14 /* ViewController.h */,
+				B663F9A2216D02A500D35E14 /* ViewController.m */,
+				B663F9A4216D02A600D35E14 /* Assets.xcassets */,
+				B663F9A6216D02A600D35E14 /* Main.storyboard */,
+				B663F9A9216D02A600D35E14 /* Info.plist */,
+				B663F9AA216D02A600D35E14 /* main.m */,
+				B663F9AC216D02A600D35E14 /* LocalToIP.entitlements */,
+			);
+			path = LocalToIP;
+			sourceTree = "<group>";
+		};
+		B663F9B4216D02A600D35E14 /* LocalToIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				B663F9B5216D02A600D35E14 /* LocalToIPTests.m */,
+				B663F9B7216D02A600D35E14 /* Info.plist */,
+			);
+			path = LocalToIPTests;
+			sourceTree = "<group>";
+		};
+		B663F9BF216D02A600D35E14 /* LocalToIPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B663F9C0216D02A600D35E14 /* LocalToIPUITests.m */,
+				B663F9C2216D02A600D35E14 /* Info.plist */,
+			);
+			path = LocalToIPUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B663F99A216D02A500D35E14 /* LocalToIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B663F9C5216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIP" */;
+			buildPhases = (
+				9580388DCB046E13B516257B /* [CP] Check Pods Manifest.lock */,
+				B663F997216D02A500D35E14 /* Sources */,
+				B663F998216D02A500D35E14 /* Frameworks */,
+				B663F999216D02A500D35E14 /* Resources */,
+				B62C12E4216D18EA0033B15F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalToIP;
+			productName = LocalToIP;
+			productReference = B663F99B216D02A500D35E14 /* LocalToIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B663F9B0216D02A600D35E14 /* LocalToIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B663F9C8216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIPTests" */;
+			buildPhases = (
+				8FC27A5C1AD55B1D9789EC03 /* [CP] Check Pods Manifest.lock */,
+				B663F9AD216D02A600D35E14 /* Sources */,
+				B663F9AE216D02A600D35E14 /* Frameworks */,
+				B663F9AF216D02A600D35E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B663F9B3216D02A600D35E14 /* PBXTargetDependency */,
+			);
+			name = LocalToIPTests;
+			productName = LocalToIPTests;
+			productReference = B663F9B1216D02A600D35E14 /* LocalToIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B663F9BB216D02A600D35E14 /* LocalToIPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B663F9CB216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIPUITests" */;
+			buildPhases = (
+				9A66EAE3F2855CA91D7BE511 /* [CP] Check Pods Manifest.lock */,
+				B663F9B8216D02A600D35E14 /* Sources */,
+				B663F9B9216D02A600D35E14 /* Frameworks */,
+				B663F9BA216D02A600D35E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B663F9BE216D02A600D35E14 /* PBXTargetDependency */,
+			);
+			name = LocalToIPUITests;
+			productName = LocalToIPUITests;
+			productReference = B663F9BC216D02A600D35E14 /* LocalToIPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B663F993216D02A500D35E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Zach Gibson";
+				TargetAttributes = {
+					B663F99A216D02A500D35E14 = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					B663F9B0216D02A600D35E14 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = B663F99A216D02A500D35E14;
+					};
+					B663F9BB216D02A600D35E14 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = B663F99A216D02A500D35E14;
+					};
+				};
+			};
+			buildConfigurationList = B663F996216D02A500D35E14 /* Build configuration list for PBXProject "LocalToIP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B663F992216D02A500D35E14;
+			productRefGroup = B663F99C216D02A500D35E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B663F99A216D02A500D35E14 /* LocalToIP */,
+				B663F9B0216D02A600D35E14 /* LocalToIPTests */,
+				B663F9BB216D02A600D35E14 /* LocalToIPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B663F999216D02A500D35E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B663F9A5216D02A600D35E14 /* Assets.xcassets in Resources */,
+				B663F9A8216D02A600D35E14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9AF216D02A600D35E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9BA216D02A600D35E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FC27A5C1AD55B1D9789EC03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocalToIPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9580388DCB046E13B516257B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocalToIP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A66EAE3F2855CA91D7BE511 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocalToIPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B663F997216D02A500D35E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B663F9A3216D02A500D35E14 /* ViewController.m in Sources */,
+				B663F9AB216D02A600D35E14 /* main.m in Sources */,
+				B663F9A0216D02A500D35E14 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9AD216D02A600D35E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B663F9B6216D02A600D35E14 /* LocalToIPTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B663F9B8216D02A600D35E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B663F9C1216D02A600D35E14 /* LocalToIPUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B663F9B3216D02A600D35E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B663F99A216D02A500D35E14 /* LocalToIP */;
+			targetProxy = B663F9B2216D02A600D35E14 /* PBXContainerItemProxy */;
+		};
+		B663F9BE216D02A600D35E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B663F99A216D02A500D35E14 /* LocalToIP */;
+			targetProxy = B663F9BD216D02A600D35E14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B663F9A6216D02A600D35E14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B663F9A7216D02A600D35E14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B663F9C3216D02A600D35E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B663F9C4216D02A600D35E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B663F9C6216D02A600D35E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B89E10B51C9F59EABB6491E0 /* Pods-LocalToIP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = LocalToIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B663F9C7216D02A600D35E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF3AC770C0434215C24E242 /* Pods-LocalToIP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				INFOPLIST_FILE = LocalToIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B663F9C9216D02A600D35E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23290C120B2F47C5A1D6A5DA /* Pods-LocalToIPTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				INFOPLIST_FILE = LocalToIPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalToIP.app/Contents/MacOS/LocalToIP";
+			};
+			name = Debug;
+		};
+		B663F9CA216D02A600D35E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112E3D41D87F23A68F0ADD07 /* Pods-LocalToIPTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				INFOPLIST_FILE = LocalToIPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalToIP.app/Contents/MacOS/LocalToIP";
+			};
+			name = Release;
+		};
+		B663F9CC216D02A600D35E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8C376A26283FC5152D2517 /* Pods-LocalToIPUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				INFOPLIST_FILE = LocalToIPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LocalToIP;
+			};
+			name = Debug;
+		};
+		B663F9CD216D02A600D35E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD5F3671220E1C6F52A72FE /* Pods-LocalToIPUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U9PQ9N77J2;
+				INFOPLIST_FILE = LocalToIPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zaaa.LocalToIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LocalToIP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B663F996216D02A500D35E14 /* Build configuration list for PBXProject "LocalToIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B663F9C3216D02A600D35E14 /* Debug */,
+				B663F9C4216D02A600D35E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B663F9C5216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B663F9C6216D02A600D35E14 /* Debug */,
+				B663F9C7216D02A600D35E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B663F9C8216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B663F9C9216D02A600D35E14 /* Debug */,
+				B663F9CA216D02A600D35E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B663F9CB216D02A600D35E14 /* Build configuration list for PBXNativeTarget "LocalToIPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B663F9CC216D02A600D35E14 /* Debug */,
+				B663F9CD216D02A600D35E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B663F993216D02A500D35E14 /* Project object */;
+}

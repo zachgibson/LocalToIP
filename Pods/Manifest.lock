@@ -1,0 +1,23 @@
+PODS:
+  - ZXingObjC (3.5.0):
+    - ZXingObjC/All (= 3.5.0)
+  - ZXingObjC/All (3.5.0)
+
+DEPENDENCIES:
+  - ZXingObjC (from `https://github.com/TheLevelUp/ZXingObjC.git`)
+
+EXTERNAL SOURCES:
+  ZXingObjC:
+    :git: https://github.com/TheLevelUp/ZXingObjC.git
+
+CHECKOUT OPTIONS:
+  ZXingObjC:
+    :commit: 882364a09eadc3263d8ca68f9836cb0154b9fe5e
+    :git: https://github.com/TheLevelUp/ZXingObjC.git
+
+SPEC CHECKSUMS:
+  ZXingObjC: 0f6ecdf89c7c0b4bf65f0206fc3ce493e40d50a8
+
+PODFILE CHECKSUM: 71da94699cae9aaf2ad92aa3076a44ebd8aaba0f
+
+COCOAPODS: 1.5.3
