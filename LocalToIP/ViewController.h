@@ -14,6 +14,7 @@
 
 @property (weak) IBOutlet NSTextField *textFieldValue;
 @property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSTextField *textFieldLabel;
 
 @end
 

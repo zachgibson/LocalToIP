@@ -22,6 +22,8 @@ NSString *ipAddr;
     [super viewDidLoad];
 
     ipAddr = [self getIPWithNSHost];
+    NSString *ipAddrWithSlash = [NSString stringWithFormat:@"%@:", ipAddr];
+    [self.textFieldLabel setStringValue:ipAddrWithSlash];
 }
 
 
