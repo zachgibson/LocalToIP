@@ -10,7 +10,7 @@
 
 @interface ViewController : NSViewController
 
-- (NSString *)getIPWithNSHost;
+- (void)setIP:NSString;
 
 @property (weak) IBOutlet NSTextField *textFieldValue;
 @property (weak) IBOutlet NSImageView *imageView;

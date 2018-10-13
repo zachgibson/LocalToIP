@@ -20,13 +20,16 @@ NSString *ipAddr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    ipAddr = [self getIPWithNSHost];
+    
     NSString *ipAddrWithSlash = [NSString stringWithFormat:@"%@:", ipAddr];
     [self.textFieldLabel setStringValue:ipAddrWithSlash];
 }
 
-
+- (void)setIP:(NSString *)ip {
+    NSLog(@"%@", ip);
+    
+    ipAddr = ip;
+}
 
 - (IBAction)buttonClick:(NSButton *)sender {
     NSString *port = [self.textFieldValue stringValue];
@@ -53,22 +56,6 @@ NSString *ipAddr;
         NSString *errorMessage = [error localizedDescription];
         NSLog(@"%@", errorMessage);
     }
-}
-
-- (NSString *)getIPWithNSHost {
-    NSArray *addresses = [[NSHost currentHost] addresses];
-    NSString *stringAddress;
-    
-    for (NSString *anAddress in addresses) {
-        if (![anAddress hasPrefix:@"127"] && [[anAddress componentsSeparatedByString:@"."] count] == 4) {
-            stringAddress = anAddress;
-            break;
-        } else {
-            stringAddress = @"IPv4 address not available" ;
-        }
-    }
-    
-    return stringAddress;
 }
 
 

@@ -8,8 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSStatusItem *statusItem;
+    NSPopover *popover;
+    NSStoryboard *storyBoard;
+    NSViewController *viewController;
+}
 
+- (NSString *)getIPWithNSHost;
 
 @end
 
