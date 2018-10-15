@@ -24,7 +24,7 @@
     icon.template = YES;
     
     statusItem.button.image = icon;
-    statusItem.button.action = @selector(showPopover:);
+    statusItem.button.action = @selector(togglePopover:);
     
     storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
     viewController = [storyBoard instantiateControllerWithIdentifier:@"ViewController"];
@@ -34,6 +34,18 @@
     
     ViewController *vc = [[ViewController alloc] init];
     [vc setIP:[self getIPWithNSHost]];
+    
+//    NSUInteger mouseButtonMask = [NSEvent pressedMouseButtons];
+//    BOOL leftMouseButtonDown = (mouseButtonMask & (1 << 0)) != 0;
+//    BOOL rightMouseButtonDown = (mouseButtonMask & (1 << 1)) != 0;
+    
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskRightMouseDown handler:^(NSEvent *event){
+        [self togglePopover:self];
+    }];
+    
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskLeftMouseDown handler:^(NSEvent *event){
+        [self togglePopover:self];
+    }];
 }
 
 - (void)popoverDidShow:(NSNotification *)notification {
@@ -44,6 +56,8 @@
 - (NSString *)getIPWithNSHost {
     NSArray *addresses = [[NSHost currentHost] addresses];
     NSString *stringAddress;
+    
+    NSLog(@"%@", addresses);
     
     for (NSString *anAddress in addresses) {
         if (![anAddress hasPrefix:@"127"] && [[anAddress componentsSeparatedByString:@"."] count] == 4) {
@@ -57,7 +71,7 @@
     return stringAddress;
 }
 
-- (void)showPopover:(id)sender {
+- (void)togglePopover:(id)sender {
     if (popover.isShown) {
         [popover close];
     } else {

@@ -11,10 +11,12 @@
 @interface ViewController : NSViewController
 
 - (void)setIP:NSString;
+@property (weak) IBOutlet NSComboBox *portComboBox;
 
 @property (weak) IBOutlet NSTextField *textFieldValue;
 @property (weak) IBOutlet NSImageView *imageView;
 @property (weak) IBOutlet NSTextField *textFieldLabel;
+@property (weak) IBOutlet NSButton *button;
 
 @end
 
