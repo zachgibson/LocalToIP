@@ -57,7 +57,7 @@
     NSArray *addresses = [[NSHost currentHost] addresses];
     NSString *stringAddress;
     
-    NSLog(@"%@", addresses);
+//    NSLog(@"%@", addresses);
     
     for (NSString *anAddress in addresses) {
         if (![anAddress hasPrefix:@"127"] && [[anAddress componentsSeparatedByString:@"."] count] == 4) {
