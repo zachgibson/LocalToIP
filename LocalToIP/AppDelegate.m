@@ -35,10 +35,6 @@
     ViewController *vc = [[ViewController alloc] init];
     [vc setIP:[self getIPWithNSHost]];
     
-//    NSUInteger mouseButtonMask = [NSEvent pressedMouseButtons];
-//    BOOL leftMouseButtonDown = (mouseButtonMask & (1 << 0)) != 0;
-//    BOOL rightMouseButtonDown = (mouseButtonMask & (1 << 1)) != 0;
-    
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskRightMouseDown handler:^(NSEvent *event){
         [self togglePopover:self];
     }];

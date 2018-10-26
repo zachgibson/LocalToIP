@@ -21,28 +21,6 @@ NSString *ipAddr;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSError *error = nil;
-//    ZXMultiFormatWriter *writer = [ZXMultiFormatWriter new];
-//    ZXEncodeHints *hints = [ZXEncodeHints hints];
-//    hints.encoding = NSUTF8StringEncoding;
-//    hints.dataMatrixShape = ZXDataMatrixSymbolShapeHintForceSquare;
-//    
-//    ZXBitMatrix *result = [writer encode:@"spotify:track:1qlgw9MTX3xLaM8YH2OyAv"
-//                                  format:kBarcodeFormatQRCode
-//                                   width:1220
-//                                  height:1220
-//                                   hints:hints
-//                                   error:&error];
-//    
-//    if (result) {
-//        CGImageRef image = [[ZXImage imageWithMatrix:result] cgimage];
-//        NSImage *qr = [[NSImage alloc] initWithCGImage:image size:CGSizeMake(610, 610)];
-//        self.imageView.image = qr;
-//    } else {
-//        NSString *errorMessage = [error localizedDescription];
-//        NSLog(@"%@", errorMessage);
-//    }
-    
     NSString *ipAddrWithSlash = [NSString stringWithFormat:@"%@:", ipAddr];
     [self.textFieldLabel setStringValue:ipAddrWithSlash];
     [self.portComboBox setDelegate:self];
@@ -79,7 +57,7 @@ NSString *ipAddr;
 
     if ([port length] != 0) {
         NSError *error = nil;
-        ZXMultiFormatWriter *writer = [ZXMultiFormatWriter new];
+        ZXMultiFormatWriter *writer = [[ZXMultiFormatWriter alloc] init];
         ZXEncodeHints *hints = [ZXEncodeHints hints];
         hints.encoding = NSUTF8StringEncoding;
         hints.dataMatrixShape = ZXDataMatrixSymbolShapeHintForceSquare;
@@ -92,8 +70,7 @@ NSString *ipAddr;
                                        error:&error];
         
         if (result) {
-            CGImageRef image = [[ZXImage imageWithMatrix:result] cgimage];
-            NSImage *qr = [[NSImage alloc] initWithCGImage:image size:CGSizeMake(610, 610)];
+            NSImage *qr = [[NSImage alloc] initWithCGImage:[[ZXImage imageWithMatrix:result] cgimage] size:CGSizeMake(610, 610)];
             self.imageView.image = qr;
         } else {
             NSString *errorMessage = [error localizedDescription];
