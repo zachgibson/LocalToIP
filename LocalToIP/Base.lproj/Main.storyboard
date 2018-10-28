@@ -685,27 +685,16 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="446"/>
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="465"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrQ-y0-EpE">
-                                <rect key="frame" x="106" y="353" width="172" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Generate QR Code" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="djb-SB-rO9">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="buttonClick:" target="XfG-lQ-9wD" id="gse-gP-vrf"/>
-                                </connections>
-                            </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yml-2K-Vfs">
-                                <rect key="frame" x="37" y="37" width="310" height="310"/>
+                                <rect key="frame" x="37" y="81" width="310" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSActionTemplate" id="Aue-i1-fY3"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-D5-1Gb">
-                                <rect key="frame" x="38" y="394" width="80" height="17"/>
+                                <rect key="frame" x="38" y="413" width="80" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mEg-rH-qTk">
                                     <font key="font" metaFont="system"/>
@@ -714,7 +703,7 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cw7-fB-6hA">
-                                <rect key="frame" x="124" y="389" width="79" height="26"/>
+                                <rect key="frame" x="124" y="408" width="79" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Port" drawsBackground="YES" numberOfVisibleItems="5" id="9Y6-cw-EHj">
                                     <font key="font" metaFont="system"/>
@@ -726,8 +715,17 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-5P-D92">
+                                <rect key="frame" x="206" y="413" width="9" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="4io-ch-oGb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-Jx-cMK">
-                                <rect key="frame" x="221" y="389" width="126" height="26"/>
+                                <rect key="frame" x="221" y="408" width="126" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Path" drawsBackground="YES" numberOfVisibleItems="5" id="l7X-y4-dlG">
                                     <font key="font" metaFont="system"/>
@@ -738,19 +736,43 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-5P-D92">
-                                <rect key="frame" x="206" y="394" width="9" height="17"/>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-wz-Gup">
+                                <rect key="frame" x="158" y="8" width="68" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="4io-ch-oGb">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="qr-code-button" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="oOH-jy-e7H">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonClick:" target="XfG-lQ-9wD" id="zcZ-zq-CWA"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sg-dm-RoE">
+                                <rect key="frame" x="80" y="26" width="24" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="refresh-ip" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LDc-02-ipu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onRefreshIPButtonPress:" target="XfG-lQ-9wD" id="JxE-Lq-bUe"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHa-RP-oJO">
+                                <rect key="frame" x="280" y="30" width="22" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="bpL-nq-mGX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onSettingsButtonPress:" target="XfG-lQ-9wD" id="8qO-Dj-5Ci"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="button" destination="jrQ-y0-EpE" id="df3-67-rJa"/>
+                        <outlet property="button" destination="I0J-wz-Gup" id="bS2-BJ-H3w"/>
                         <outlet property="imageView" destination="yml-2K-Vfs" id="abm-gB-9eB"/>
                         <outlet property="pathComboBox" destination="21r-Jx-cMK" id="mhb-fZ-BnY"/>
                         <outlet property="portComboBox" destination="cw7-fB-6hA" id="lWi-DE-gEZ"/>
@@ -759,10 +781,37 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="743"/>
+            <point key="canvasLocation" x="111" y="742.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SlM-y2-7c8">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Kr5-LE-qoy" sceneMemberID="viewController">
+                    <view key="view" id="JGP-mK-FL4">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzT-ug-nFm">
+                                <rect key="frame" x="200" y="141" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gucci!" id="4lr-9v-ZQC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="RqK-dY-SX0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="660"/>
         </scene>
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="qr-code-button" width="76" height="76"/>
+        <image name="refresh-ip" width="25" height="32"/>
+        <image name="settings" width="22" height="24"/>
     </resources>
 </document>

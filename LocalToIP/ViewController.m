@@ -13,6 +13,7 @@
 #import <ZXDataMatrixWriter.h>
 #import <ZXMultiFormatWriter.h>
 #import <ZXImage.h>
+#import "AppDelegate.h"
 
 NSString *ipAddr;
 
@@ -21,8 +22,8 @@ NSString *ipAddr;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *ipAddrWithSlash = [NSString stringWithFormat:@"%@:", ipAddr];
-    [self.textFieldLabel setStringValue:ipAddrWithSlash];
+    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@:", ipAddr];
+    [self.textFieldLabel setStringValue:ipAddrWithColon];
     [self.portComboBox setDelegate:self];
     
     if ([[self.portComboBox stringValue] length] == 0) {
@@ -81,6 +82,23 @@ NSString *ipAddr;
     }
 }
 
+- (IBAction)onRefreshIPButtonPress:(NSButton *)sender {
+    ipAddr = [[IPAddress interfaceIP4Addresses] allKeys][0];
+    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@:", ipAddr];
+    [self.textFieldLabel setStringValue:ipAddrWithColon];
+}
+
+- (IBAction)onSettingsButtonPress:(NSButton *)sender {
+    NSStoryboard *storyBoard;
+    storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSViewController *viewController;
+    viewController = [storyBoard instantiateControllerWithIdentifier:@"SettingsViewController"];
+ 
+    AppDelegate *appDelegate = [[AppDelegate alloc] init];
+    
+//    [appDelegate togglePopover:self];
+    [viewController presentViewControllerAsModalWindow:viewController];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];

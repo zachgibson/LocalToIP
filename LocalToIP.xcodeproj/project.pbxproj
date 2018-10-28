@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CDF24F0A6B589A05589415F /* libPods-LocalToIP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 628FB211688D5D8F6CC585EC /* libPods-LocalToIP.a */; };
+		31040B5921864C9B0065243D /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 31040B5821864C9B0065243D /* IPAddress.m */; };
 		B663F9A0216D02A500D35E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F99F216D02A500D35E14 /* AppDelegate.m */; };
 		B663F9A3216D02A500D35E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B663F9A2216D02A500D35E14 /* ViewController.m */; };
 		B663F9A5216D02A600D35E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B663F9A4216D02A600D35E14 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 		112E3D41D87F23A68F0ADD07 /* Pods-LocalToIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPTests/Pods-LocalToIPTests.release.xcconfig"; sourceTree = "<group>"; };
 		23290C120B2F47C5A1D6A5DA /* Pods-LocalToIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPTests/Pods-LocalToIPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E135C1AB7F125BC9ACCE8E9 /* libPods-LocalToIPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalToIPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31040B5721864C9B0065243D /* IPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		31040B5821864C9B0065243D /* IPAddress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
 		628FB211688D5D8F6CC585EC /* libPods-LocalToIP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalToIP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8C376A26283FC5152D2517 /* Pods-LocalToIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalToIPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalToIPUITests/Pods-LocalToIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B663F99B216D02A500D35E14 /* LocalToIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalToIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +160,8 @@
 				B663F99F216D02A500D35E14 /* AppDelegate.m */,
 				B663F9A1216D02A500D35E14 /* ViewController.h */,
 				B663F9A2216D02A500D35E14 /* ViewController.m */,
+				31040B5721864C9B0065243D /* IPAddress.h */,
+				31040B5821864C9B0065243D /* IPAddress.m */,
 				B663F9A4216D02A600D35E14 /* Assets.xcassets */,
 				B663F9A6216D02A600D35E14 /* Main.storyboard */,
 				B663F9A9216D02A600D35E14 /* Info.plist */,
@@ -380,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B663F9A3216D02A500D35E14 /* ViewController.m in Sources */,
+				31040B5921864C9B0065243D /* IPAddress.m in Sources */,
 				B663F9AB216D02A600D35E14 /* main.m in Sources */,
 				B663F9A0216D02A500D35E14 /* AppDelegate.m in Sources */,
 			);

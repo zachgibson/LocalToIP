@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "IPAddress.h"
 
 @interface ViewController : NSViewController <NSComboBoxDelegate>
 

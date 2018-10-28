@@ -11,11 +11,10 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate> {
     NSStatusItem *statusItem;
     NSPopover *popover;
-    NSStoryboard *storyBoard;
-    NSViewController *viewController;
+    NSString *ipAddress;
 }
 
-- (NSString *)getIPWithNSHost;
+- (void)togglePopover:(id)sender;
 
 @end
 
