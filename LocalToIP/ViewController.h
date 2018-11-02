@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "IPAddress.h"
 
-@interface ViewController : NSViewController <NSComboBoxDelegate>
+@interface ViewController : NSViewController <NSComboBoxDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
 - (void)setIP:NSString;
 

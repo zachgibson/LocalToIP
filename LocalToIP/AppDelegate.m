@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "IPAddress.h"
 
 @interface AppDelegate ()
 
@@ -36,17 +35,20 @@
     [popover setDelegate:self];
     popover.contentViewController = viewController;
     
-    ViewController *vc = [[ViewController alloc] init];
-    ipAddress = [[IPAddress interfaceIP4Addresses] allKeys][0];
-    [vc setIP:ipAddress];
     
-//    [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskRightMouseDown handler:^(NSEvent *event){
-//        [self togglePopover:self];
-//    }];
-//
-//    [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskLeftMouseDown handler:^(NSEvent *event){
-//        [self togglePopover:self];
-//    }];
+    
+    ViewController *vc = [[ViewController alloc] init];
+    ipAddress = self.getIPAddress;
+    [vc setIP:ipAddress];
+}
+
+- (NSString *)getIPAddress {
+    NSString *source = @"do shell script \"ipconfig getifaddr en0\"";
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:source];
+    NSDictionary *dict = nil;
+    NSAppleEventDescriptor *descriptor = [script executeAndReturnError:&dict];
+    
+    return [descriptor stringValue];
 }
 
 - (void)togglePopover:(id)sender {
@@ -54,6 +56,7 @@
         [popover close];
     } else {
         [popover showRelativeToRect:NSZeroRect ofView:sender preferredEdge:NSRectEdgeMinY];
+        [NSRunningApplication.currentApplication activateWithOptions:NSApplicationActivateIgnoringOtherApps];
     }
 }
 

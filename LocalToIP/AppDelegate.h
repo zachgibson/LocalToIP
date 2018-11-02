@@ -14,6 +14,7 @@
     NSString *ipAddress;
 }
 
+- (NSString *)getIPAddress;
 - (void)togglePopover:(id)sender;
 
 @end

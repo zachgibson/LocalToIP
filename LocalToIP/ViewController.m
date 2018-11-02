@@ -26,6 +26,11 @@ NSString *ipAddr;
     [self.textFieldLabel setStringValue:ipAddrWithColon];
     [self.portComboBox setDelegate:self];
     
+    NSUserDefaults *defaults;
+    NSArray *ports = [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"ports"]];
+    NSLog(@"%@", ports);
+    [self.portComboBox addItemsWithObjectValues:ports];
+    
     if ([[self.portComboBox stringValue] length] == 0) {
         [self.button setEnabled:NO];
     } else {
@@ -83,9 +88,10 @@ NSString *ipAddr;
 }
 
 - (IBAction)onRefreshIPButtonPress:(NSButton *)sender {
-    ipAddr = [[IPAddress interfaceIP4Addresses] allKeys][0];
-    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@:", ipAddr];
-    [self.textFieldLabel setStringValue:ipAddrWithColon];
+    AppDelegate *appDelegate = [[AppDelegate alloc] init];
+    ipAddr = [appDelegate getIPAddress];
+    
+    [self.textFieldLabel setStringValue:[appDelegate getIPAddress]];
 }
 
 - (IBAction)onSettingsButtonPress:(NSButton *)sender {
@@ -94,17 +100,9 @@ NSString *ipAddr;
     NSViewController *viewController;
     viewController = [storyBoard instantiateControllerWithIdentifier:@"SettingsViewController"];
  
-    AppDelegate *appDelegate = [[AppDelegate alloc] init];
-    
-//    [appDelegate togglePopover:self];
     [viewController presentViewControllerAsModalWindow:viewController];
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
 
 
 @end
