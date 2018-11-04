@@ -26,16 +26,17 @@ NSString *ipAddr;
     [self.textFieldLabel setStringValue:ipAddrWithColon];
     [self.portComboBox setDelegate:self];
     
-    NSUserDefaults *defaults;
-    NSArray *ports = [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"ports"]];
-    NSLog(@"%@", ports);
-    [self.portComboBox addItemsWithObjectValues:ports];
-    
     if ([[self.portComboBox stringValue] length] == 0) {
         [self.button setEnabled:NO];
     } else {
         [self.button setEnabled:YES];
     }
+}
+
+- (void)viewDidAppear {
+    [self.portComboBox removeAllItems];
+    NSArray *savedPorts = [[NSUserDefaults standardUserDefaults] objectForKey:@"ports"];
+    [self.portComboBox addItemsWithObjectValues:savedPorts];
 }
 
 - (void)setIP:(NSString *)ip {

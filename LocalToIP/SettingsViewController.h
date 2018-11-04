@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SettingsViewController : NSViewController<NSTextFieldDelegate, NSTableViewDelegate>
-
-@property (weak) IBOutlet NSSegmentedControl *segmentedControl;
-@property (weak) IBOutlet NSTableView *tableView;
+@interface SettingsViewController : NSViewController
 
 @end
