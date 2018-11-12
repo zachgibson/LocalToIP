@@ -8,15 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController <NSComboBoxDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface ViewController : NSViewController<NSComboBoxDelegate, NSComboBoxDataSource>
 
 - (void)setIP:NSString;
 
-@property (weak) IBOutlet NSComboBox *portComboBox;
-@property (weak) IBOutlet NSComboBox *pathComboBox;
-@property (weak) IBOutlet NSImageView *imageView;
-@property (weak) IBOutlet NSTextField *textFieldLabel;
-@property (weak) IBOutlet NSButton *button;
-
 @end
-

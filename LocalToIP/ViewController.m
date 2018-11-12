@@ -17,6 +17,17 @@
 
 NSString *ipAddr;
 
+@interface ViewController ()
+
+@property (weak) IBOutlet NSComboBox *portComboBox;
+@property (weak) IBOutlet NSComboBox *pathComboBox;
+@property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSTextField *textFieldLabel;
+@property (weak) IBOutlet NSButton *button;
+@property (weak) NSString *selectedPort;
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -25,36 +36,21 @@ NSString *ipAddr;
     NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@:", ipAddr];
     [self.textFieldLabel setStringValue:ipAddrWithColon];
     [self.portComboBox setDelegate:self];
-    
-    if ([[self.portComboBox stringValue] length] == 0) {
-        [self.button setEnabled:NO];
-    } else {
-        [self.button setEnabled:YES];
-    }
 }
 
 - (void)viewDidAppear {
     [self.portComboBox removeAllItems];
     NSArray *savedPorts = [[NSUserDefaults standardUserDefaults] objectForKey:@"ports"];
-    [self.portComboBox addItemsWithObjectValues:savedPorts];
+    
+    NSLog(@"%@", savedPorts);
+    
+    if (savedPorts) {
+        [self.portComboBox addItemsWithObjectValues:savedPorts];
+    }
 }
 
 - (void)setIP:(NSString *)ip {
     ipAddr = ip;
-}
-
-- (void)controlTextDidChange:(NSNotification *)notification {
-    NSComboBox *comboBox = [notification object];
-    
-    if ([[comboBox stringValue] length] != 0) {
-        [self.button setEnabled:YES];
-    } else {
-        [self.button setEnabled:NO];
-    }
-}
-
-- (void)comboBoxSelectionDidChange:(NSNotification *)notification {
-    [self.button setEnabled:YES];
 }
 
 - (IBAction)buttonClick:(NSButton *)sender {
@@ -62,29 +58,25 @@ NSString *ipAddr;
     NSString *path = [self.pathComboBox stringValue];
     NSString *fullAddr = [NSString stringWithFormat:@"http://%@:%@/%@", ipAddr, port, path];
 
-    if ([port length] != 0) {
-        NSError *error = nil;
-        ZXMultiFormatWriter *writer = [[ZXMultiFormatWriter alloc] init];
-        ZXEncodeHints *hints = [ZXEncodeHints hints];
-        hints.encoding = NSUTF8StringEncoding;
-        hints.dataMatrixShape = ZXDataMatrixSymbolShapeHintForceSquare;
-        
-        ZXBitMatrix *result = [writer encode:fullAddr
-                                      format:kBarcodeFormatQRCode
-                                       width:1220
-                                      height:1220
-                                       hints:hints
-                                       error:&error];
-        
-        if (result) {
-            NSImage *qr = [[NSImage alloc] initWithCGImage:[[ZXImage imageWithMatrix:result] cgimage] size:CGSizeMake(610, 610)];
-            self.imageView.image = qr;
-        } else {
-            NSString *errorMessage = [error localizedDescription];
-            NSLog(@"%@", errorMessage);
-        }
+    NSError *error = nil;
+    ZXMultiFormatWriter *writer = [[ZXMultiFormatWriter alloc] init];
+    ZXEncodeHints *hints = [ZXEncodeHints hints];
+    hints.encoding = NSUTF8StringEncoding;
+    hints.dataMatrixShape = ZXDataMatrixSymbolShapeHintForceSquare;
+    
+    ZXBitMatrix *result = [writer encode:fullAddr
+                                  format:kBarcodeFormatQRCode
+                                   width:1220
+                                  height:1220
+                                   hints:hints
+                                   error:&error];
+    
+    if (result) {
+        NSImage *qr = [[NSImage alloc] initWithCGImage:[[ZXImage imageWithMatrix:result] cgimage] size:CGSizeMake(610, 610)];
+        self.imageView.image = qr;
     } else {
-        NSLog(@"no port detected");
+        NSString *errorMessage = [error localizedDescription];
+        NSLog(@"%@", errorMessage);
     }
 }
 
@@ -103,7 +95,5 @@ NSString *ipAddr;
  
     [viewController presentViewControllerAsModalWindow:viewController];
 }
-
-
 
 @end
