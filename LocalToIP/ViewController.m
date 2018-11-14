@@ -19,6 +19,7 @@ NSString *ipAddr;
 
 @interface ViewController ()
 
+@property (weak) IBOutlet NSComboBox *protocolComboBox;
 @property (weak) IBOutlet NSComboBox *portComboBox;
 @property (weak) IBOutlet NSComboBox *pathComboBox;
 @property (weak) IBOutlet NSImageView *imageView;
@@ -33,7 +34,7 @@ NSString *ipAddr;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@:", ipAddr];
+    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@", ipAddr];
     [self.textFieldLabel setStringValue:ipAddrWithColon];
     [self.portComboBox setDelegate:self];
 }
@@ -54,9 +55,10 @@ NSString *ipAddr;
 }
 
 - (IBAction)buttonClick:(NSButton *)sender {
+    NSString *protocol = [self.protocolComboBox stringValue];
     NSString *port = [self.portComboBox stringValue];
     NSString *path = [self.pathComboBox stringValue];
-    NSString *fullAddr = [NSString stringWithFormat:@"http://%@:%@/%@", ipAddr, port, path];
+    NSString *fullAddr = [NSString stringWithFormat:@"%@://%@:%@/%@", protocol, ipAddr, port, path];
 
     NSError *error = nil;
     ZXMultiFormatWriter *writer = [[ZXMultiFormatWriter alloc] init];

@@ -685,25 +685,25 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="448"/>
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="464"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yml-2K-Vfs">
-                                <rect key="frame" x="37" y="81" width="310" height="310"/>
+                                <rect key="frame" x="29" y="81" width="326" height="326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSActionTemplate" id="Aue-i1-fY3"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-D5-1Gb">
-                                <rect key="frame" x="38" y="405" width="80" height="17"/>
+                                <rect key="frame" x="99" y="421" width="80" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mEg-rH-qTk">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="mEg-rH-qTk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cw7-fB-6hA">
-                                <rect key="frame" x="124" y="400" width="79" height="26"/>
+                                <rect key="frame" x="185" y="416" width="72" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Port" drawsBackground="YES" numberOfVisibleItems="5" id="9Y6-cw-EHj">
                                     <font key="font" metaFont="system"/>
@@ -711,17 +711,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                             </comboBox>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-5P-D92">
-                                <rect key="frame" x="206" y="405" width="9" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="4io-ch-oGb">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-Jx-cMK">
-                                <rect key="frame" x="221" y="400" width="126" height="26"/>
+                                <rect key="frame" x="262" y="416" width="93" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Path" drawsBackground="YES" numberOfVisibleItems="5" id="l7X-y4-dlG">
                                     <font key="font" metaFont="system"/>
@@ -762,6 +753,19 @@
                                     <action selector="onSettingsButtonPress:" target="XfG-lQ-9wD" id="8qO-Dj-5Ci"/>
                                 </connections>
                             </button>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-wF-7z8">
+                                <rect key="frame" x="32" y="416" width="64" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="HTTP" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="49O-Ee-8Ap">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>http</string>
+                                        <string>https</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
                         </subviews>
                     </view>
                     <connections>
@@ -769,12 +773,13 @@
                         <outlet property="imageView" destination="yml-2K-Vfs" id="abm-gB-9eB"/>
                         <outlet property="pathComboBox" destination="21r-Jx-cMK" id="mhb-fZ-BnY"/>
                         <outlet property="portComboBox" destination="cw7-fB-6hA" id="lWi-DE-gEZ"/>
+                        <outlet property="protocolComboBox" destination="nWe-wF-7z8" id="XiX-gS-0c2"/>
                         <outlet property="textFieldLabel" destination="zAe-D5-1Gb" id="cGt-qH-AWg"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="734"/>
+            <point key="canvasLocation" x="111" y="743"/>
         </scene>
         <!--Settings-->
         <scene sceneID="SlM-y2-7c8">
