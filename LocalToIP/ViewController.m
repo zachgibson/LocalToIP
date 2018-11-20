@@ -43,8 +43,6 @@ NSString *ipAddr;
     [self.portComboBox removeAllItems];
     NSArray *savedPorts = [[NSUserDefaults standardUserDefaults] objectForKey:@"ports"];
     
-    NSLog(@"%@", savedPorts);
-    
     if (savedPorts) {
         [self.portComboBox addItemsWithObjectValues:savedPorts];
     }
@@ -94,7 +92,7 @@ NSString *ipAddr;
     storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
     NSViewController *viewController;
     viewController = [storyBoard instantiateControllerWithIdentifier:@"SettingsViewController"];
- 
+
     [viewController presentViewControllerAsModalWindow:viewController];
 }
 
