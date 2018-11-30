@@ -81,10 +81,15 @@ NSString *ipAddr;
 }
 
 - (IBAction)onRefreshIPButtonPress:(NSButton *)sender {
-    AppDelegate *appDelegate = [[AppDelegate alloc] init];
-    ipAddr = [appDelegate getIPAddress];
+    NSString *protocol = [self.protocolComboBox stringValue];
+    NSString *port = [self.portComboBox stringValue];
+    NSString *path = [self.pathComboBox stringValue];
+    NSString *fullAddr = [NSString stringWithFormat:@"%@://%@:%@/%@", protocol, ipAddr, port, path];
+    NSURL *url = [NSURL URLWithString:fullAddr];
     
-    [self.textFieldLabel setStringValue:[appDelegate getIPAddress]];
+    NSSharingService *service = [NSSharingService sharingServiceNamed:NSSharingServiceNameSendViaAirDrop];
+    NSArray *shareItems = [NSArray arrayWithObjects:url, nil];
+    [service performWithItems:shareItems];
 }
 
 - (IBAction)onSettingsButtonPress:(NSButton *)sender {
