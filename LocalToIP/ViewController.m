@@ -23,7 +23,7 @@ NSString *ipAddr;
 @property (weak) IBOutlet NSComboBox *portComboBox;
 @property (weak) IBOutlet NSComboBox *pathComboBox;
 @property (weak) IBOutlet NSImageView *imageView;
-@property (weak) IBOutlet NSTextField *textFieldLabel;
+@property (weak) IBOutlet NSTextField *ipAddressTextField;
 @property (weak) IBOutlet NSButton *button;
 @property (weak) NSString *selectedPort;
 
@@ -34,8 +34,7 @@ NSString *ipAddr;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *ipAddrWithColon = [NSString stringWithFormat:@"%@", ipAddr];
-    [self.textFieldLabel setStringValue:ipAddrWithColon];
+    [self setIpAddressStringValue];
     [self.portComboBox setDelegate:self];
 }
 
@@ -48,8 +47,22 @@ NSString *ipAddr;
     }
 }
 
+- (void)setIpAddressStringValue {
+    [self.ipAddressTextField setStringValue:ipAddr];
+}
+
 - (void)setIP:(NSString *)ip {
     ipAddr = ip;
+}
+
+- (void)refreshIP {
+    AppDelegate *appDelegate = [[AppDelegate alloc] init];
+    [self setIP:[appDelegate getIPAddress]];
+    [self setIpAddressStringValue];
+}
+
+- (void)quitApp {
+    [NSApp terminate:self];
 }
 
 - (IBAction)buttonClick:(NSButton *)sender {
@@ -80,7 +93,7 @@ NSString *ipAddr;
     }
 }
 
-- (IBAction)onRefreshIPButtonPress:(NSButton *)sender {
+- (IBAction)onAirDropPress:(NSButton *)sender {
     NSString *protocol = [self.protocolComboBox stringValue];
     NSString *port = [self.portComboBox stringValue];
     NSString *path = [self.pathComboBox stringValue];
@@ -93,6 +106,23 @@ NSString *ipAddr;
 }
 
 - (IBAction)onSettingsButtonPress:(NSButton *)sender {
+    NSMenu *menu = [[NSMenu alloc] init];
+    NSMenuItem *itemAbout = [[NSMenuItem alloc] initWithTitle:@"About" action:nil keyEquivalent:@""];
+    NSMenuItem *itemFAQ = [[NSMenuItem alloc] initWithTitle:@"FAQ" action:nil keyEquivalent:@""];
+    NSMenuItem *itemRefreshIP = [[NSMenuItem alloc] initWithTitle:@"Refresh IP Address" action:@selector(refreshIP) keyEquivalent:@"r"];
+    NSMenuItem *itemSettings = [[NSMenuItem alloc] initWithTitle:@"Settings" action:@selector(openSettings) keyEquivalent:@"s"];
+    NSMenuItem *itemQuit = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quitApp) keyEquivalent:@"q"];
+    [menu addItem:itemAbout];
+    [menu addItem:itemFAQ];
+    [menu insertItem:[NSMenuItem separatorItem] atIndex:2];
+    [menu addItem:itemRefreshIP];
+    [menu addItem:itemSettings];
+    [menu insertItem:[NSMenuItem separatorItem] atIndex:5];
+    [menu addItem:itemQuit];
+    [menu popUpMenuPositioningItem:itemAbout atLocation:NSPointFromCGPoint(CGPointMake(sender.frame.origin.x, sender.frame.origin.y - (sender.frame.size.height / 2))) inView:self.view];
+}
+
+- (void)openSettings {
     NSStoryboard *storyBoard;
     storyBoard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
     NSViewController *viewController;
